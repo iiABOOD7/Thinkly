@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Thinkly — Your AI Research Assistant for Smarter Learning" />
-  <title>Thinkly | AI Research Assistant</title>
+  <meta name="description" content="Thinkly — Your AI Research Assistant" />
+  <title>Thinkly | Research Assistant</title>
 
   <style>
     /* === GLOBAL STYLES === */
@@ -16,10 +16,11 @@
 
     body {
       font-family: "Poppins", Arial, sans-serif;
-      background-color: #f9f9fb;
+      background-color: #fafafa;
       color: #222;
       line-height: 1.6;
       overflow-x: hidden;
+      text-align: center;
     }
 
     /* === HEADER === */
@@ -34,9 +35,9 @@
     }
 
     header h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     header p {
@@ -48,9 +49,8 @@
 
     /* === MAIN SECTION === */
     main {
-      padding: 80px 20px;
-      text-align: center;
-      max-width: 900px;
+      padding: 90px 20px;
+      max-width: 850px;
       margin: auto;
     }
 
@@ -58,29 +58,29 @@
       font-size: 2rem;
       color: #6b4ce6;
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
     main p {
       font-size: 1.1rem;
       color: #444;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 35px;
-      background: #6b4ce6;
-      color: white;
-      text-decoration: none;
-      border-radius: 40px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(107, 76, 230, 0.3);
+    /* === ARROW TO BUBBLE === */
+    .arrow {
+      position: fixed;
+      bottom: 110px;
+      right: 90px;
+      font-size: 2rem;
+      color: #6b4ce6;
+      animation: bounce 1.5s infinite;
+      transform: rotate(-45deg);
     }
 
-    .btn:hover {
-      background: #5741d9;
-      box-shadow: 0 8px 20px rgba(107, 76, 230, 0.4);
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) rotate(-45deg); }
+      50% { transform: translateY(-10px) rotate(-45deg); }
     }
 
     /* === FOOTER === */
@@ -101,7 +101,7 @@
       z-index: 9999;
     }
 
-    /* === SIMPLE FADE ANIMATION === */
+    /* === SMOOTH APPEAR === */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -115,24 +115,27 @@
 
 <body>
   <header>
-    <h1>🧠 Thinkly</h1>
-    <p>Your AI-powered research assistant — helping you learn, write, and think smarter.</p>
+    <h1>Thinkly</h1>
+    <p>Your personal AI research assistant — helping you explore and understand smarter.</p>
   </header>
 
   <main>
     <h2>Welcome to Thinkly</h2>
     <p>
-      Thinkly makes research easier. Ask questions, explore topics, and get clear, well-organized answers — powered by artificial intelligence.
+      Thinkly simplifies your research process. Ask questions, gather insights, and learn faster — all with the power of intelligent AI.
     </p>
-    <a href="#!" class="btn">Start Researching</a>
   </main>
+
+  <!-- Arrow pointing to chat bubble -->
+  <div class="arrow">➜</div>
 
   <footer>
     © 2025 Thinkly | Powered by ElevenLabs Convai
   </footer>
 
-  <!-- 🧩 ElevenLabs Convai Widget -->
+  <!-- Thinkly AI Widget -->
   <elevenlabs-convai agent-id="agent_9101k6x1bwckf2rbkhhzhff3qa9j"></elevenlabs-convai>
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
+
